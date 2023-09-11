@@ -1,0 +1,43 @@
+.breadcrumbs
+
+    &__list
+        padding-left: 0
+        list-style: none
+        margin: 0
+        font-size: 0
+
+    &__item
+        line-height: 1.2
+        position: relative
+        color: #9C9C9C
+        display: inline
+        font-weight: 400
+        font-size: 12px
+
+        @media ($min-md)
+            font-size: 18px
+
+        &:after
+            margin: 0 4px
+            content: '/'
+
+        &:last-child
+            margin-right: 0
+
+            &:after
+                display: none
+
+    &__link
+        position: relative
+        color: #9C9C9C
+        text-decoration: none
+        display: inline
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: #9C9C9C
+
+            @media ($min-md)
+                color: var(--yellow)

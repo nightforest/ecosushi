@@ -1,0 +1,163 @@
+.form
+
+    &__title
+        display: block
+        margin: 0 0 8px
+        font-size: 14px
+        font-weight: 700
+        line-height: 1.4
+
+        @media ($min-md)
+            font-size: 22px
+            margin-bottom: 15px
+
+    &__block
+        border-top: 1px solid #373538
+        padding: 25px 0
+
+        @media ($min-md)
+            padding: 20px 0
+
+        .form__group
+
+            @media ($min-md)
+                margin-bottom: 10px
+
+            &:last-child
+                margin-bottom: 0
+
+        .form__row
+            margin-bottom: 0
+
+            @media ($min-md)
+                gap: 10px 50px
+
+            .form__group
+
+                @media ($min-md)
+                    margin-bottom: 0
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 20px 15px
+        margin-bottom: 20px
+
+        @media ($min-md)
+            margin-bottom: 30px
+            gap: 30px
+
+        &--lg-flex
+
+            @media ($min-lg)
+                display: flex
+                flex-wrap: wrap
+                gap: 50px
+
+    &__group
+        position: relative
+        margin-bottom: 20px
+
+        @media ($min-md)
+            margin-bottom: 30px
+
+        &--6
+            grid-column: 6 span
+            margin-bottom: 0
+
+        &--12
+            grid-column: 12 span
+            margin-bottom: 0
+
+        &--md-4
+
+            @media ($min-md)
+                grid-column: 4 span
+
+        &--md-6
+
+            @media ($min-md)
+                grid-column: 6 span
+        
+        &.has-error
+
+            .form__input
+                border-color: var(--red)
+
+    &__placeholder
+        position: absolute
+        top: 16px
+        left: 20px
+        width: calc(100% - 40px)
+        color: var(--white)
+        font-size: 12px
+        line-height: 1.2
+        margin: 0
+        font-weight: 400
+        transition: transform 200ms cubic-bezier(0, 0, .2, 1) 0ms
+        transform: translate(0, 0)
+        display: block
+        padding: 0
+        letter-spacing: 1px
+        transform-origin: top left
+        z-index: $z-index-1
+
+        &.is-active
+            transform: translate(0, -14px) scale(.85)
+
+    &__input
+
+        &.just-validate-error-field
+            border-color: var(--deep-red)
+
+    &__agree
+        margin: 20px 0
+        color: #9C9C9C
+        font-weight: 400
+        text-align: center
+        font-size: 12px
+
+        a
+            color: #9C9C9C
+            border-bottom: 1px solid #9C9C9C
+            transition: all .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+
+                @media ($min-md)
+                    color: var(--yellow)
+                    border-color: transparent
+
+    &__button-group
+        margin-top: 30px
+        text-align: center
+
+        @media ($min-md)
+            text-align: left
+
+        &--mt-20
+            margin-top: 20px
+
+            @media ($min-md)
+                text-align: center
+
+    &__button
+        max-width: 205px
+        width: 100%
+        justify-content: center
+        gap: 15px
+
+        .button__icon
+            margin-left: 0
+
+    .just-validate-error-label
+        position: absolute
+        bottom: -14px
+        font-size: 12px
+        line-height: 1
+
+        @media ($min-md)
+            font-size: 14px
+            bottom: -16px

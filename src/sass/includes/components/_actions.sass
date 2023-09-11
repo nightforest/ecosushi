@@ -1,0 +1,109 @@
+.actions
+
+    &__list
+        display: flex
+        align-items: center
+        margin: 0
+        padding: 0
+        gap: 14px
+        list-style: none
+
+    &__item
+        position: relative
+        width: 40px
+        height: 40px
+
+        &--visible-lg
+            display: none
+
+            @media ($min-md)
+                display: block
+
+    &__button
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        border: 1px solid #333
+        border-radius: 4px
+        transition: all .5s ease
+        color: var(--green)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+
+            @media ($min-md)
+                border-color: var(--yellow)
+
+        &-count
+            position: absolute
+            top: -7px
+            right: -6px
+            width: 18px
+            height: 18px
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            background: var(--red)
+            border: 2px solid #1F1B1F
+            color: var(--white)
+            border-radius: 6px
+            font-size: 10px
+            line-height: 1
+            font-weight: 800
+
+        &--green
+            border-color: var(--green)
+            background: var(--green)
+            color: var(--white)
+
+            &:hover,
+            &:active,
+            &:focus-visible
+
+                @media ($min-md)
+                    background: var(--yellow)
+                    border-color: var(--yellow)
+
+    &__phone
+        position: absolute
+        top: calc(100% + 15px)
+        left: 50%
+        margin-left: -108px
+        width: 100%
+        min-width: 216px
+        padding: 10px 20px
+        text-align: center
+        background: var(--white)
+        box-shadow: 0 19px 33px 0 rgba(111, 109, 113, .13)
+
+        @media ($max-md)
+            min-width: 0
+            margin: 0
+            left: auto
+            right: -195px
+            width: 100vw
+
+        &-link
+            color: var(--black)
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--green)
+
+    &__dropdown
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+        transition: all .25s ease
+
+        &.is-visible
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)

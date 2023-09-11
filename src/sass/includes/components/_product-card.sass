@@ -1,0 +1,182 @@
+.product-card
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    padding: 12px
+    background: #282828
+    border-radius: 4px
+
+    @media ($min-xs)
+        padding: 14px
+
+    &__tape
+        position: absolute
+        top: 3px
+        left: -12px
+        width: 46px
+        height: 16px
+        z-index: $z-index-1
+        transform: rotate(-45deg)
+
+        span
+            position: relative
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            border-radius: 2px 2px 0 0
+            background: var(--green)
+            color: var(--white)
+            font-size: 12px
+            font-weight: 500
+            line-height: 1
+            z-index: $z-index-1
+
+        &:before
+            position: absolute
+            top: 2px
+            left: -2px
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 9px 0 9px 9px
+            border-color: transparent transparent transparent #4e8118
+            content: ""
+            transform: rotate(13deg)
+        
+        &:after
+            position: absolute
+            top: 2px
+            right: -2px
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 9px 9px 9px 0
+            border-color: transparent #4e8118 transparent transparent
+            content: ""
+            transform: rotate(-13deg)
+
+        &--purple
+
+            span
+                background: var(--purple)
+            
+            &:before
+                border-color: transparent transparent transparent #4F0D7C
+
+            &:after
+                border-color: transparent #4F0D7C transparent transparent
+
+    &__picture
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100px
+        min-height: 100px
+        margin-bottom: 12px
+
+        @media ($min-lg)
+            margin-bottom: 15px
+            height: 165px
+            min-height: 165px
+    
+    &__img
+        max-width: 100%
+        height: 100%
+        max-height: 100%
+        width: auto
+
+    &__descr
+        color: #9C9C9C
+        line-height: 1.2
+        font-size: 12px
+        font-weight: 400
+        margin-bottom: 5px
+
+        @media ($min-lg)
+            margin-bottom: 10px
+    
+    &__title
+        margin: 0 0 5px
+        font-size: 14px
+        font-weight: 500
+        line-height: 1.2
+
+        @media ($min-lg)
+            font-size: 20px
+    
+    &__link
+        color: var(--white)
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 5px
+        margin-top: auto
+    
+    &__price
+        line-height: 1.1
+        white-space: nowrap
+
+        &-old
+            display: block
+            font-size: 10px
+            color: #9C9C9C
+            font-weight: 400
+
+            @media ($min-xs)
+                font-size: 12px
+
+            @media ($min-lg)
+                font-size: 16px
+
+        &-new
+            display: block
+            font-size: 14px
+            font-weight: 500
+
+            @media ($min-xs)
+                font-size: 18px
+
+            @media ($min-lg)
+                font-size: 20px
+    
+    &__button
+        padding: 5px
+        gap: 3px
+        min-width: 0
+        text-align: left
+        font-size: 10px
+
+        @media ($min-xs)
+            min-width: 84px
+            font-size: 12px
+            white-space: nowrap
+
+        @media ($min-md)
+            height: 50px
+            max-width: 130px
+            width: 100%
+            padding: 5px 10px
+            font-size: 16px
+
+        .button__icon
+            width: 10px
+            height: 10px
+            min-width: 10px
+
+            @media ($min-xs)
+                width: auto
+                height: auto
+                min-width: 0

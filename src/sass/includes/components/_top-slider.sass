@@ -1,0 +1,84 @@
+.top-slider
+    position: relative
+    padding-bottom: 20px
+    z-index: $z-index-0
+
+    @media ($min-md)
+        padding-bottom: 0
+    
+    &__slide
+        position: relative
+        display: flex
+        align-items: center
+        height: 250px
+        padding: 25px
+
+        @media ($min-md)
+            height: 470px
+            padding: 30px 0
+
+    &__picture
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        z-index: $z-index-minus
+    
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    
+    &__title
+        margin: 0 0 5px
+        font-size: 35px
+        font-weight: 500
+        line-height: 0.9
+
+        @media ($min-md)
+            font-size: 75px
+            line-height: 1
+            margin: 0 0 20px
+        
+        span
+            display: block
+            text-transform: uppercase
+            font-weight: 900
+            color: var(--yellow)
+
+            @media ($min-md)
+                display: inline
+
+    &__descr
+        margin: 0 0 10px
+
+        @media ($min-md)
+            font-size: 22px
+            margin: 0 0 20px
+
+        strong
+            display: block
+            font-weight: 900
+            color: var(--yellow)
+
+            @media ($min-md)
+                display: inline
+
+    &__button
+        min-width: 114px
+
+        @media ($min-md)
+            min-width: 180px
+
+        .button__icon
+
+            @media ($min-md)
+                width: 8px
+                height: 13px
+
+    &__pagination
+
+        @media ($min-md)
+            --swiper-pagination-bottom: 40px

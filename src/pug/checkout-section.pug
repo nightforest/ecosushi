@@ -1,0 +1,157 @@
+section.checkout-section
+    .container.checkout-section__container
+        h1.page-title.checkout-section__title Оформлення заказу
+        h2.page-title.checkout-section__sub-title Ваше замовлення
+
+        .order-table.checkout-section__order-table
+            .order-table__head
+                .order-table__head-col
+                .order-table__head-col Товар
+                .order-table__head-col Ціна
+                .order-table__head-col Кількість
+                .order-table__head-col Підсумок
+                .order-table__head-col
+            
+            .order-table__body
+                .order-table__item
+                    .order-card
+                        .order-card__image
+                            picture.order-card__picture
+                                img.order-card__img(src="img/product-card-img.webp" srcset="img/product-card-img@2x.webp 2x" loading="lazy" width="222" height="164"  alt="alt")
+
+                        .order-card__product
+                            h3.order-card__title
+                                a.order-card__link(href="#") Вечеринка СЕТ довга назва
+                            
+                            p.order-card__descr 32 шт | 2000 г
+
+                        .order-card__count
+                            .price
+                                span.price__new 2
+
+                        .order-card__price
+                            .price
+                                del.price__old 1999 ₴
+                                span.price__new 1799 ₴
+
+                        .order-card__total
+                            .price
+                                span.price__new 3 598 ₴
+
+                    
+                    h3.order-table__sub-title Опція
+
+                    .order-card
+                        .order-card__image
+                            picture.order-card__picture
+                                img.order-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+
+                        .order-card__product
+                            h3.order-card__title
+                                span.order-card__title-count 2x 
+                                a.order-card__link(href="#") Coca Cola
+                            
+                            p.order-card__descr 0.5 л
+
+                        .order-card__price
+                            .price
+                                span.price__new 1 ₴
+
+                        .order-card__count.order-card__count--visible-md
+                            .price
+                                span.price__new 2
+
+                        .order-card__total.order-card__total--order-3
+                            .price
+                                span.price__new 2 ₴
+
+        form.form.promo-form(id="promo-form" autocomplete="off" novalidate="novalidate")
+            input#inputPromo.input.form__input.promo-form__input(type="text" name="inputPromo" placeholder="Промокод" autocomplete="off" required)
+            button.button.promo-form__button Застосувати
+
+        .promo-total
+            .promo-total__title Помокод
+            .promo-total__discount -200 ₴
+        
+        .promo-total
+            .promo-total__title Помокод
+            .promo-total__discount
+                svg.promo-total__icon(width="18" height="18")
+                    use(xlink:href="img/sprite.svg#gift")
+                | Подарунок додано
+
+        .order-total
+            h2.order-total__title Разом
+            .order-total__price 3 600 ₴
+
+        form.form(id="checkout-form" autocomplete="off" novalidate="novalidate")
+            .form__block
+                label.form__title Спосіб оплати 
+                
+                .form__row.form__row--lg-flex
+                    .form__group.form__group--6
+                        .radio
+                            input.radio__input#payment-radio-1(type="radio" name="payment-radio" value="department" checked)
+                            label.radio__label(for="payment-radio-1") Оплата готівкою
+                    
+                    .form__group.form__group--6
+                        .radio
+                            input.radio__input#payment-radio-2(type="radio" name="payment-radio" value="address")
+                            label.radio__label(for="payment-radio-2") Оплата онлайн
+
+                    .form__group.form__group--12
+                        .radio
+                            input.radio__input#payment-radio-3(type="radio" name="payment-radio" value="address")
+                            label.radio__label(for="payment-radio-3") Через термінал кур'єру при доставці замовлення
+
+            .form__block
+                label.form__title Спосіб доставки
+                
+                .form__group
+                    .radio
+                        input.radio__input#delivery-radio-1(type="radio" name="delivery-radio" value="department" checked)
+                        label.radio__label(for="delivery-radio-1") Самовивіз
+                
+                .form__group
+                    .radio
+                        input.radio__input#delivery-radio-2(type="radio" name="delivery-radio" value="address")
+                        label.radio__label(for="delivery-radio-2") Доставка
+                            span Суму мінімального замовлення для доставки у вашому районі дивіться 
+                                a(href="#") тут
+
+            .form__row
+                .form__group.form__group--12.form__group--md-4
+                    select#selectCity.select(name="selectCity" aria-label="Choose a city" required)
+                        option(value="1") Кам’янське
+
+                .form__group.form__group--6.form__group--md-4
+                    input#inputStreet.input.form__input(type="text" name="inputStreet" placeholder="Вулиця *" autocomplete="off" required)
+
+                .form__group.form__group--6.form__group--md-4
+                    input#inputBuilding.input.form__input(type="text" name="inputBuilding" placeholder="Дім *" autocomplete="off" required)
+
+                .form__group.form__group--6.form__group--md-4
+                    input#inputFloor.input.form__input(type="text" name="inputFloor" placeholder="Поверх" autocomplete="off")
+
+                .form__group.form__group--6.form__group--md-4
+                    input#inputIntercom.input.form__input(type="text" name="inputIntercom" placeholder="Домофон" autocomplete="off")
+
+                .form__group.form__group--12.form__group--md-4
+                    input#inputApartment.input.form__input(type="text" name="inputApartment" placeholder="Квартира" autocomplete="off")
+
+            label.form__title Контактні дані
+
+            .form__row
+                .form__group.form__group--12.form__group--md-6
+                    input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="Ім'я *" autocomplete="off" required)
+                
+                .form__group.form__group--12.form__group--md-6
+                    input#inputPhone.input.form__input.tell-input(type="text" name="inputPhone" placeholder="" autocomplete="off" required)
+
+            .form__group
+                textarea#textarea.textarea.form__input(name="message" rows="3" placeholder="Коментар до замовлення" autocomplete="off")
+
+            .form__button-group
+                button.button.button--green.form__button Замовити
+                    svg.button__icon(width="8" height="8")
+                        use(xlink:href="img/sprite.svg#arrow-right")

@@ -1,0 +1,55 @@
+.app-section
+    position: relative
+    background: var(--green)
+
+    @media ($min-lg)
+        background: image-set("/img/app-bg-desktop.webp" 1x, "/img/app-bg-desktop@2x.webp" 2x) no-repeat center center
+        background-size: cover
+
+    &__container
+        position: relative
+        display: flex
+        align-items: center
+        padding: 35px 15px
+        min-height: 250px
+
+        @media ($min-md)
+            min-height: 325px
+            padding: 75px 15px
+
+    &__picture
+        position: absolute
+        bottom: 0
+        right: 0
+        display: flex
+    
+    &__content
+        position: relative
+
+    &__title
+        font-size: 35px
+        font-weight: 500
+        line-height: .9
+        max-width: 270px
+        margin: 0 0 15px
+
+        @media ($min-lg)
+            max-width: 100%
+
+    &__descr
+        max-width: 250px
+        font-weight: 400
+        margin: 0 0 15px
+
+        @media ($min-lg)
+            font-size: 22px
+            line-height: 1.45
+            max-width: 500px
+            margin-bottom: 20px
+    
+    &__buttons
+        display: flex
+        gap: 8px
+
+        @media ($min-lg)
+            gap: 10px

@@ -1,0 +1,39 @@
+.delivery-card
+    display: flex
+    flex-direction: column
+    padding: 10px 15px 15px
+    border: 1px solid #494949
+    background: #221E23
+    border-radius: 4px
+    height: 100%
+    width: 100%
+
+    @media ($min-md)
+        padding: 25px 30px 30px
+
+    &__title
+        margin: 0 0 8px
+        font-size: 14px
+        font-weight: 700
+        color: var(--green)
+
+        @media ($min-md)
+            font-size: 22px
+            margin: 0 0 10px
+    
+    &__list
+
+        li
+            font-weight: 400
+    
+    &__picture
+        display: flex
+        align-items: center
+        justify-content: center
+
+        @media ($min-md)
+            margin-top: 15px
+    
+    &__img
+        max-width: 100%
+        height: auto

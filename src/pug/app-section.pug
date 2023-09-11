@@ -1,0 +1,17 @@
+section.app-section
+    .container.app-section__container
+        picture.app-section__picture
+            source(srcset="img/app-img-desktop@2x.webp 2x, img/app-img-desktop.webp" width="440" height="325" media="(min-width: 768px)")
+            img.app-section__img(src="img/app-img.webp" srcset="img/app-img@2x.webp 2x" loading="lazy" width="208" height="249"  alt="alt")
+
+        .app-section__content
+            h2.app-section__title Завантажуйте наш додаток 
+            p.app-section__descr Будьте в курсі усіх новинок і економте час на оформленні замовлень
+            .app-section__buttons
+                a.app-button(href="#")
+                    svg.app-button__icon(width="77" height="21")
+                        use(xlink:href="img/sprite.svg#app-store")
+                
+                a.app-button(href="#")
+                    svg.app-button__icon(width="85" height="21")
+                        use(xlink:href="img/sprite.svg#google-play")

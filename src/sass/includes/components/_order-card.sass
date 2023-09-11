@@ -1,0 +1,134 @@
+.order-card
+    position: relative
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 1fr .8fr
+    align-items: flex-start
+    gap: 5px 10px
+
+    &:first-child
+        padding-top: 50px
+
+        @media ($min-md)
+            padding-top: 0
+
+    @media ($min-md)
+        grid-template-columns: repeat(14, 1fr)
+        grid-template-rows: 1fr
+        align-items: center
+        gap: 20px
+
+    &__image
+        grid-column: 2 span
+        grid-row: 2 span
+        order: 1
+
+    &__product
+        grid-column: 5 span
+        order: 2
+
+        @media ($min-md)
+            grid-column: 4 span
+
+    &__price
+        grid-column: 5 span
+        order: 4
+
+        @media ($min-md)
+            grid-column: 3 span
+            text-align: center
+            order: 3
+
+    &__count
+        grid-column: 5 span
+        order: 3
+        text-align: right
+
+        @media ($min-md)
+            grid-column: 2 span
+            text-align: center
+            order: 4
+
+        &--visible-md
+            display: none
+
+            @media ($min-md)
+                display: block
+    
+    &__total
+        grid-column: 5 span
+        text-align: right
+        order: 5
+
+        @media ($min-md)
+            grid-column: 2 span
+
+        &--order-3
+            order: 3
+
+            @media ($min-md)
+                order: 5
+
+    &__remove
+        position: absolute
+        top: 5px
+        right: 0
+        grid-column: 0 span
+        order: 6
+
+        @media ($min-md)
+            position: relative
+            top: auto
+            right: auto
+            grid-column: 1 span
+            text-align: right
+
+    &__picture
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100%
+
+    &__img
+        max-width: 100%
+        height: auto
+
+    &__title
+        margin: 0 0 2px
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 500
+
+        @media ($min-md)
+            margin: 0 0 5px
+            font-size: 16px
+
+        @media ($min-lg)
+            font-size: 20px
+
+        &-count
+
+            @media ($min-md)
+                display: none
+    
+    &__descr
+        margin: 0
+        font-size: 12px
+        font-weight: 400
+        color: #9C9C9C
+
+    &__link
+        color: var(--white)
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+    
+    &__quantity
+        margin-left: auto
+
+        @media ($min-md)
+            margin: 0 auto

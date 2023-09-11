@@ -1,0 +1,75 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: $z-index-3
+
+    &__top
+        padding: 10px 0
+        background: linear-gradient(45deg, #2F3328, #1F1B1F)
+
+        @media ($min-md)
+            padding: 18px 0
+            background: #171318
+
+    &__container
+        display: flex
+        align-items: center
+        gap: 14px
+
+    &__logo
+        margin-right: auto
+
+        @media ($min-md)
+            margin-right: 0
+
+    &-menu
+        margin: 0 auto
+        display: none
+
+        @media ($min-md)
+            display: block
+
+        &__list
+            display: flex
+            align-items: center
+            gap: 50px
+            padding: 0
+            margin: 0
+            list-style: none
+            line-height: 1
+
+            @media ($max-lg)
+                gap: 20px
+
+        &__item
+            position: relative
+
+        &__link
+            position: relative
+            display: flex
+            align-items: center
+            text-align: left
+            font-size: 16px
+            font-weight: 500
+            color: var(--white)
+            transition: color .5s ease
+
+            @media ($max-lg)
+                font-size: 14px
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--yellow)
+
+            &.is-active
+                color: var(--green)
+
+    &__bottom
+        background: #282828
+        display: none
+
+        @media ($min-md)
+            display: block

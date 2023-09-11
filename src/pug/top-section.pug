@@ -1,0 +1,34 @@
+section.top-section
+    .swiper.top-slider
+        .swiper-wrapper
+            .swiper-slide.top-slider__slide
+                picture.top-slider__picture
+                    source(srcset="img/slider-img-desktop@2x.webp 2x, img/slider-img-desktop.webp" width="1920" height="470" media="(min-width: 768px)")
+                    img.top-slider__img(src="img/slider-img.webp" srcset="img/slider-img@2x.webp 2x" loading="lazy" width="414" height="250"  alt="alt")
+                
+                .container.top-slider__container
+                    h1.top-slider__title Смачна 
+                        span ШАРА
+                    p.top-slider__descr Купи 1 суші - та отримай 
+                        strong 2 набір у подарунок!
+                    
+                    a.button.top-slider__button(href="#") Перейти
+                        svg.button__icon(width="6" height="8")
+                            use(xlink:href="img/sprite.svg#arrow-right")
+            
+            .swiper-slide.top-slider__slide
+                picture.top-slider__picture
+                    source(srcset="img/slider-img-desktop@2x.webp 2x, img/slider-img-desktop.webp" width="1920" height="470" media="(min-width: 768px)")
+                    img.top-slider__img(src="img/slider-img.webp" srcset="img/slider-img@2x.webp 2x" loading="lazy" width="414" height="250"  alt="alt")
+                
+                .container.top-slider__container
+                    h1.top-slider__title Смачна 
+                        span ШАРА
+                    p.top-slider__descr Купи 1 суші - та отримай 
+                        strong 2 набір у подарунок!
+
+                    a.button.top-slider__button(href="#") Перейти
+                        svg.button__icon(width="6" height="8")
+                            use(xlink:href="img/sprite.svg#arrow-right")
+
+        .swiper-pagination.top-slider__pagination

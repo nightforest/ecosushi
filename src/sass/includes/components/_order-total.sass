@@ -1,0 +1,30 @@
+.order-total
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 25px
+    gap: 20px
+
+    @media ($min-md)
+        padding-right: 70px
+
+    @media ($min-lg)
+        padding-right: 100px
+
+    &__title
+        margin: 0
+        font-size: 25px
+        line-height: 1.2
+        font-weight: 900
+        color: var(--yellow)
+
+        @media ($min-md)
+            font-size: 36px
+
+    &__price
+        font-size: 18px
+        line-height: 1.2
+        font-weight: 500
+
+        @media ($min-md)
+            font-size: 36px

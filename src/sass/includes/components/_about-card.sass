@@ -1,0 +1,56 @@
+.about-card
+
+    &__header
+        display: flex
+        align-items: center
+        gap: 15px
+        margin-bottom: 12px
+
+        @media ($min-md)
+            flex-direction: column
+            gap: 25px
+
+    &__pic
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 42px
+        min-width: 42px
+        height: 42px
+        border-radius: 4px
+        background: var(--green)
+
+        @media ($min-md)
+            width: 90px
+            height: 90px
+            min-width: 90px
+
+    &__icon
+
+        @media ($min-md)
+            width: 60px
+            height: 60px
+    
+    &__title
+        margin: 0
+        font-size: 12px
+        font-weight: 700
+        text-transform: uppercase
+        color: var(--green)
+
+        @media ($min-md)
+            text-align: center
+            font-size: 16px
+            line-height: 1.2
+
+    &__body
+        font-weight: 400
+
+        @media ($min-md)
+            text-align: center
+            font-size: 14px
+
+        p
+
+            &:last-child
+                margin-bottom: 0

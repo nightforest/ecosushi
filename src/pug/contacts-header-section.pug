@@ -1,0 +1,13 @@
+section.header-section
+    picture.header-section__bg
+        source(srcset="img/header-bg-desktop@2x.webp 2x, img/header-bg-desktop.webp" width="1920" height="134" media="(min-width: 768px)")
+        img.header-section__bg-img(src="img/header-bg.webp" srcset="img/header-bg@2x.webp 2x" loading="lazy" width="414" height="134"  alt="alt")
+        
+    .container.header-section__container
+        nav.breadcrumbs.header-section__breadcrumbs(aria-label="breadcrumb")
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="#") Головна
+                li.breadcrumbs__item(aria-current="page") Контакти
+        
+        h1.page-title.header-section__title Контакти - ECO SUSHI

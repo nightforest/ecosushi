@@ -1,0 +1,63 @@
+.order-table
+    margin-bottom: 30px
+
+    &__head
+        display: grid
+        grid-template-columns: repeat(14, 1fr)
+        gap: 20px
+        padding: 0 20px
+
+        @media ($max-md)
+            display: none
+
+        &-col
+            grid-column: 2 span
+            font-size: 14px
+            color: #9C9C9C
+            padding: 7px 0
+
+            &:nth-child(2)
+                grid-column: 4 span
+
+            &:nth-child(3)
+                grid-column: 3 span
+                text-align: center
+
+            &:nth-child(4)
+                text-align: center
+
+            &:nth-child(5)
+                text-align: right
+            
+            &:nth-child(6)
+                grid-column: 1 span
+    
+    &__body
+
+        @media ($min-md)
+            border: 1px solid #494949
+            border-radius: 6px
+
+    &__item
+
+        &:not(:last-child)
+            border-bottom: 1px solid #494949
+            padding: 0 0 10px
+
+        @media ($min-md)
+            padding: 20px 19px
+
+            &:not(:last-child)
+                padding: 20px 19px
+
+    &__sub-title
+        margin: 5px 0
+        font-size: 14px
+        font-weight: 900
+        color: var(--yellow)
+        text-align: center
+
+        @media ($min-md)
+            margin: 5px 0 5px 155px
+            font-size: 18px
+            text-align: left

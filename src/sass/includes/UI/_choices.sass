@@ -1,0 +1,146 @@
+.choices
+    margin-bottom: 0
+    
+    &[data-type*=select-one]::after
+        border: none
+        width: 20px
+        height: 20px
+        margin-top: -10px
+        right: 15px
+        background: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.7941 0.366239C16.9894 0.561501 16.9894 0.878083 16.7941 1.07335L9.78136 8.08608C9.19557 8.67186 8.24583 8.67186 7.66004 8.08608L0.647311 1.07334C0.452049 0.878082 0.452049 0.5615 0.647311 0.366238C0.842573 0.170976 1.15916 0.170976 1.35442 0.366238L8.36715 7.37897C8.56241 7.57423 8.87899 7.57423 9.07426 7.37897L16.087 0.366239C16.2822 0.170976 16.5988 0.170977 16.7941 0.366239Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A") no-repeat center center
+        transition: all .5s ease
+        
+    &[data-type*=select-one].is-open::after
+        margin-top: -10px
+        transform: rotateX(180deg)
+
+    &__placeholder
+        display: none
+        color: var(--grey)
+        opacity: 1
+
+    &__inner
+        display: flex
+        align-items: center
+        width: 100%
+        height: 48px
+        border-radius: 4px
+        background: #221E23
+        border: 1px solid #494949
+        box-shadow: none
+        font-size: 12px
+        line-height: 1.2
+        color: var(--white)
+        padding: 5px 45px 5px 20px !important
+        font-weight: 400
+        outline: none
+        appearance: none
+        transition: all .5s ease
+
+        @media ($min-md)
+            font-size: 14px
+
+        &:hover
+            border-color: var(--yellow)
+
+        &:focus-visible
+            border-color: var(--yellow)
+
+        &:has(> select.just-validate-error-field)
+            border-color: var(--deep-red)
+
+    &.is-open
+        // z-index: $z-index-1
+
+        .choices__inner
+            border-radius: 4px
+            border-color: var(--yellow)
+
+    &.is-focused
+
+        .choices__inner
+            border-color: var(--yellow)
+
+    &__list
+
+        &--dropdown,
+        &[aria-expanded]
+            box-shadow: 0 10px 15px 0 rgba(255, 255, 255, .05)
+            border-radius: 4px
+            margin-top: 0
+            background: #221E23
+            border: 1px solid #494949
+
+            &.is-active
+                z-index: 100
+        
+        &--single
+            padding: 0
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+            .choices__item
+                display: inline
+
+        &--multiple
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: 3px
+
+            .choices__item
+                margin: 0
+                border-color: var(--green)
+                background: var(--green)
+                font-size: 10px
+                font-weight: 400
+                line-height: 1
+    
+    &[data-type*=select-multiple]
+
+        .choices__button
+            background-repeat: no-repeat
+            background-position: center center
+            border-left-color: var(--light-green)
+
+    &__item
+        
+        &--disabled
+            text-indent: -9999px
+            height: 0
+            width: 0
+            padding: 0 !important
+
+    &__input
+        background: var(--white)
+        margin: 0
+        
+        &::placeholder
+            color: var(--grey)
+            font-weight: 400
+        
+.is-flipped
+
+    .choices__list
+
+        &--dropdown,
+        &[aria-expanded]
+            border-radius: 10px
+            margin-bottom: 0
+
+.choices__list--dropdown .choices__item--selectable::after, 
+.choices__list[aria-expanded] .choices__item--selectable::after
+    display: none
+
+.choices__list--dropdown .choices__item, 
+.choices__list[aria-expanded] .choices__item
+    padding: 10px 20px
+    font-size: 12px
+    font-weight: 400
+    transition: all .5s ease
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, 
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted
+    background: var(--yellow)
+    color: var(--black)

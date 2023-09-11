@@ -1,0 +1,59 @@
+section.delivery-section
+    .container.delivery-section__container
+        .delivery-section__text
+            p Сервіс доставки 
+                strong.green-color ECO SUSHI
+                |  працює щодня 
+                strong.green-color з 10:00 до 22:00
+                |  спеціально для Вас.
+        
+        ul.delivery-section__list
+            li.delivery-section__item
+                .delivery-card
+                    h2.delivery-card__title Як зробити замовлення:
+                    ul.check-list.delivery-card__list
+                        li На сайті
+                        li По телефону
+                        li Замовити зворотній дзвінок, і наш оператор зв'яжеться максимально найближчим часом
+
+                    picture.delivery-card__picture
+                        img.delivery-card__img(src="img/delivery-img-1.webp" srcset="img/delivery-img-1@2x.webp 2x" loading="lazy" width="230" height="206"  alt="alt")
+
+            li.delivery-section__item
+                .delivery-card
+                    h2.delivery-card__title Як сплатити замовлення:
+                    ul.check-list.delivery-card__list
+                        li Оплата кур'єру готівкою
+                        li Оплата кур'єру банківською карткою (через термінал)
+                        li Оплата на сайті (інтернет платіж)
+                        li Оплата при самовивезенні
+
+                    picture.delivery-card__picture
+                        img.delivery-card__img(src="img/delivery-img-2.webp" srcset="img/delivery-img-2@2x.webp 2x" loading="lazy" width="312" height="172"  alt="alt")
+
+        .tabs.delivery-section__tabs(data-tabs="tabs-1")
+            ul.tabs__nav
+                li.tabs__nav-item
+                    button.tabs__nav-btn(type="button") Самовивіз
+                
+                li.tabs__nav-item
+                    button.tabs__nav-btn(type="button") Кур'єром
+                
+                li.tabs__nav-item
+                    button.tabs__nav-btn(type="button") Доставка на час
+            
+            .tabs-content(data-tabs-content="tabs-1")
+                .tabs-panel
+                    p Ви можете забрати замовлення самостійно за адресою: 
+                    ul.check-list
+                        li м. Дніпро, вул. Титова 13  
+                        li м. Дніпро, вул. Михайла Грушевського, 2
+ 
+                .tabs-panel
+                    p Мінімальна сума замовлення 
+                        strong.green-color БЕЗКОШТОВНОЇ ДОСТАВКИ - 299 грн
+                        | . У деякі райони міста сума мінімального замовлення може змінюватись, рекомендуємо уточнювати в оператора або дивитися 
+                        a(href="#") тут
+
+                .tabs-panel
+                    p Ви можете оформити замовлення на певний час і дату за Вашим бажанням.

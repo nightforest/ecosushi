@@ -1,0 +1,88 @@
+.map
+    padding: 0 15px
+
+    @media ($min-md)
+        padding: 0
+
+    &__iframe
+        border-radius: 4px
+        border: 0
+
+        @media ($min-md)
+            border-radius: 0
+            height: 440px
+
+    &-legend
+        margin-bottom: 12px
+
+        @media ($min-md)
+            margin-bottom: 24px
+
+        &__title
+            font-size: 16px
+            font-weight: 500
+            line-height: 1.25
+            margin: 0 0 8px
+
+            @media ($min-md)
+                text-align: center
+                font-size: 35px
+                max-width: 680px
+                margin: 0 auto 20px
+
+            span
+                color: var(--green)
+                font-weight: 700
+
+        &__list
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            gap: 10px 20px
+            padding: 0
+            margin: 0
+            list-style: none
+            max-width: 230px
+
+            @media ($min-md)
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 40px
+                max-width: 100%
+        
+        &__item
+            grid-column: 6 span
+            display: flex
+            align-items: center
+            gap: 8px
+        
+        &__circle
+            width: 16px
+            height: 16px
+            min-width: 16px
+            background: #fff
+            border-radius: 50%
+
+            @media ($min-lg)
+                width: 22px
+                height: 22px
+
+            &--red
+                background: #B94D48
+            
+            &--gold
+                background: #C0A33E
+            
+            &--yellow
+                background: #E9F350
+            
+            &--blue
+                background: #418FEE
+        
+        &__price
+            font-size: 12px
+            font-weight: 700
+            line-height: 1
+
+            @media ($min-lg)
+                font-size: 22px

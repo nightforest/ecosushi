@@ -1,0 +1,43 @@
+.products-section
+    padding: 15px 0
+    background: #1F1B1F
+
+    @media ($min-md)
+        padding: 35px 0
+
+    &--gradient
+        padding: 25px 0 15px
+
+        @media ($min-md)
+            padding: 70px 0 35px
+            background: #1F1B1F linear-gradient(to bottom, #2F3328,  #1F1B1F)
+            background-size: 100% 365px
+            background-repeat: no-repeat
+
+    &__title
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 15px
+        margin-bottom: 15px
+        text-align: center
+
+        @media ($min-md)
+            margin-bottom: 25px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 15px
+        padding: 0
+        margin: 0
+        list-style: none
+    
+    &__item
+        grid-column: 6 span
+
+        @media ($min-md)
+            grid-column: 4 span
+        
+        @media ($min-lg)
+            grid-column: 3 span

@@ -1,0 +1,33 @@
+.contacts-section
+    padding: 20px 0 30px
+
+    @media ($min-md)
+        padding: 50px 0
+
+    &__text
+        margin-bottom: 15px
+        
+        @media ($min-md)
+            margin-bottom: 30px
+
+        p
+            &:last-child
+                margin-bottom: 0
+    
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 10px
+        padding: 0
+        margin: 0
+        list-style: none
+
+        @media ($min-md)
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            gap: 30px
+
+    &__item
+
+        @media ($min-md)
+            grid-column: 6 span

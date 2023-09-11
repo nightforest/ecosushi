@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+html
+    position: relative
+    min-height: 100%
+    scroll-behavior: smooth
+
+::selection
+    background: var(--green)
+    color: var(--white)
+
+body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    font-size: 12px
+    line-height: 1.6
+    letter-spacing: 1px
+    font-family: var(--font)
+    font-weight: 500
+    color: var(--font-color)
+    background: #1F1B1F
+    backface-visibility: hidden
+
+    @media ($min-md)
+        font-size: 16px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-weight: 900
+    margin: 0
+
+a
+    text-decoration: none
+    color: var(--green)
+
+    &:hover,
+    &:active
+        color: var(--yellow)
+        text-decoration: none
+
+    &:focus-visible
+        color: var(--yellow)
+        outline: none
+        text-decoration: none
+
+    // &:visited
+    //     color: inherit
+    //     font-weight: 400
+
+p
+    margin: 0 0 .8rem
+
+.container
+    width: 100%
+    margin: 0 auto
+    padding: 0 15px
+
+    @media ($min-sm)
+        max-width: 100%
+
+    @media ($min-md)
+        max-width: 768px
+
+    @media ($min-lg)
+        max-width: 960px
+
+    @media ($min-xl)
+        max-width: 1140px
+
+    &--fluid
+        max-width: 100%
+
+.main
+    flex: 1
+    padding-top: 60px
+
+    @media ($min-md)
+        padding-top: 146px
+
+    &--center
+        display: flex
+        align-items: center
+        width: 100%
+
+    &--flex
+        display: flex
+
+.section-title
+    margin: 0
+    font-size: 16px
+    font-weight: 500
+    line-height: 1.2
+
+    @media ($min-md)
+        font-size: 35px
+
+.page-title
+    margin: 0
+    font-size: 25px
+    font-weight: 900
+    line-height: 1.05
+    color: var(--yellow)
+    text-align: center
+
+    @media ($min-md)
+        font-size: 35px
+
+.green-color
+    color: var(--green)
+
+.phone
+    display: inline-flex
+    align-items: center
+    gap: 15px
+
+    &__icon
+
+        @media ($min-md)
+            width: 20px
+            height: 20px
+
+    &__link
+        color: var(--green)
+        font-weight: 700
+
+.price
+    line-height: 1.2
+
+    &__old
+        display: block
+        font-size: 12px
+        font-weight: 400
+        color: #9C9C9C
+
+        @media ($min-lg)
+            display: inline
+            margin-right: 16px
+            font-size: 16px
+
+    &__new
+        display: block
+        font-size: 18px
+        font-weight: 500
+
+        @media ($min-lg)
+            display: inline
+            font-size: 24px
+
+
+.scroll-disabled
+    overflow-y: hidden
+
+.back-button
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    background: #282828
+    border: 1px solid #333
+    border-radius: 4px
+    transition: border-color .5s ease
+    color: var(--green)
+
+    &:hover,
+    &:active,
+    &:focus-visible
+
+        @media ($min-md)
+            border-color: var(--yellow)
+
+.animation-fade,
+.animation-left,
+.animation-right,
+.animation-down,
+.animation-up
+    opacity: 0
+
+input,
+textarea,
+button,
+select,
+a
+    -webkit-tap-highlight-color: transparent
+
+.iti
+    display: block
+
+.iti__flag-container
+    padding: 1px 0 1px 1px
+
+.iti--separate-dial-code .iti__selected-flag
+    background: none !important
+    font-size: 12px
+    font-weight: 400
+    outline: none
+    padding: 0 8px 0 20px
+    color: #fff
+    border-right: 1px solid #494949
+
+.iti__country-list
+    color: #000
+
+.iti__arrow
+    border-top-color: #fff
+
+    &--up
+        border-bottom-color: #fff

@@ -1,0 +1,101 @@
+.tabs
+    position: relative
+
+    &__nav
+        position: relative
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        
+        @media ($max-md)
+            border: 1px solid #494949
+            background: #221E23
+            border-radius: 4px
+            margin: 0 0 20px
+
+        &.is-visible
+            display: block
+
+        &-item
+            position: relative
+            width: 100%
+            text-align: center
+
+        &-btn
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 34px
+            box-sizing: border-box
+            -webkit-tap-highlight-color: transparent
+            outline: none
+            border: 0
+            margin: 0
+            cursor: pointer
+            user-select: none
+            vertical-align: middle
+            appearance: none
+            text-decoration: none
+            font-weight: 700
+            font-size: 14px
+            line-height: 1
+            letter-spacing: 0
+            padding: 2px 5px
+            border-radius: 3px
+            color: var(--white)
+            background: none
+            box-shadow: none
+            transition: all .5s ease
+
+            @media ($min-md)
+                display: inline-flex
+                width: auto
+                color: var(--white)
+                background: var(--green)
+                padding: 5px 30px
+                border-radius: 4px 4px 0 0
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                outline: none
+                color: var(--white)
+
+            &.is-active
+                color: var(--white)
+                background: var(--green)
+
+    &-content
+
+        @media ($min-md)
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            border: 1px solid #494949
+            background: #221E23
+            border-radius: 4px
+                
+    &-panel
+        border: 1px solid var(--green)
+        border-radius: 4px
+        padding: 12px 15px
+
+        @media ($min-md)
+            grid-column: 4 span
+            border: none
+            border-radius: 0
+            border-right: 1px solid #494949
+            padding: 20px 25px
+
+            &:last-child
+                border-right: none
+
+        a
+            text-decoration: underline
+
+        p
+
+            &:last-child
+                margin-bottom: 0

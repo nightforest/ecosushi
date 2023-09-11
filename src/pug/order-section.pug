@@ -1,0 +1,120 @@
+section.order-section
+    .container.order-section__container
+        h1.page-title.order-section__title Моє замовлення
+
+        .order-table
+            .order-table__head
+                .order-table__head-col
+                .order-table__head-col Товар
+                .order-table__head-col Ціна
+                .order-table__head-col Кількість
+                .order-table__head-col Підсумок
+                .order-table__head-col
+            
+            .order-table__body
+                .order-table__item
+                    .order-card
+                        .order-card__image
+                            picture.order-card__picture
+                                img.order-card__img(src="img/product-card-img.webp" srcset="img/product-card-img@2x.webp 2x" loading="lazy" width="222" height="164"  alt="alt")
+
+                        .order-card__product
+                            h3.order-card__title
+                                a.order-card__link(href="#") Вечеринка СЕТ довга назва
+                            
+                            p.order-card__descr 32 шт | 2000 г
+
+                        .order-card__count
+                            .quantity.order-card__quantity
+                                button.quantity__button.quantity__minus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();") −
+                                input.quantity__input.input-numbers(type="number" name="inputQuantity" min="1" max="99" step="1" value='2')
+                                button.quantity__button.quantity__plus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();") +
+
+                        .order-card__price
+                            .price
+                                del.price__old 1999 ₴
+                                span.price__new 1799 ₴
+
+                        .order-card__total
+                            .price
+                                span.price__new 3 598 ₴
+
+                        .order-card__remove
+                            button.remove-button.order-card__remove-button(type="button" data-modal="modal-delete")
+                                svg.remove-button__icon(width="23" height="23")
+                                    use(xlink:href="img/sprite.svg#close-modal")
+                    
+                    h3.order-table__sub-title Опція
+
+                    .order-card
+                        .order-card__image
+                            picture.order-card__picture
+                                img.order-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+
+                        .order-card__product
+                            h3.order-card__title
+                                span.order-card__title-count 2x 
+                                a.order-card__link(href="#") Coca Cola
+                            
+                            p.order-card__descr 0.5 л
+
+                        .order-card__price
+                            .price
+                                span.price__new 1 ₴
+
+                        .order-card__count.order-card__count--visible-md
+                            .price
+                                span.price__new 2
+
+                        .order-card__total.order-card__total--order-3
+                            .price
+                                span.price__new 2 ₴
+
+                .order-table__item
+                    .order-card
+                        .order-card__image
+                            picture.order-card__picture
+                                img.order-card__img(src="img/product-card-img.webp" srcset="img/product-card-img@2x.webp 2x" loading="lazy" width="222" height="164"  alt="alt")
+
+                        .order-card__product
+                            h3.order-card__title
+                                a.order-card__link(href="#") Вечеринка СЕТ довга назва
+                            
+                            p.order-card__descr 32 шт | 2000 г
+
+                        .order-card__count
+                            .quantity.order-card__quantity
+                                button.quantity__button.quantity__minus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();") −
+                                input.quantity__input.input-numbers(type="number" name="inputQuantity" min="1" max="99" step="1" value='2')
+                                button.quantity__button.quantity__plus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();") +
+
+                        .order-card__price
+                            .price
+                                del.price__old 1999 ₴
+                                span.price__new 1799 ₴
+
+                        .order-card__total
+                            .price
+                                span.price__new 3 598 ₴
+
+                        .order-card__remove
+                            button.remove-button.order-card__remove-button(type="button" data-modal="modal-delete")
+                                svg.remove-button__icon(width="23" height="23")
+                                    use(xlink:href="img/sprite.svg#close-modal")
+        
+        .order-more
+            p.order-more__text До набору входить комплект для 4-х людей. Замовити ще?
+            .order-more__count
+                .order-more__price + 0 грн к вартості
+                .quantity.order-more__quantity
+                    button.quantity__button.quantity__minus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();") −
+                    input.quantity__input.input-numbers(type="number" name="inputQuantity" min="1" max="99" step="1" value='0')
+                    button.quantity__button.quantity__plus(type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();") +
+
+        .order-total
+            h2.order-total__title Разом
+            .order-total__price 3 600 ₴
+
+        button.button.button--green.order-section__button(type="button") Оформити замовлення
+            svg.button__icon(width="8" height="8")
+                use(xlink:href="img/sprite.svg#arrow-right")

@@ -1,0 +1,32 @@
+.check-list
+    padding: 0
+    margin: 0
+    list-style: none
+
+    &:not(:last-child)
+        margin-bottom: .8rem
+
+    > li
+        padding-left: 22px
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_18_116)'%3E%3Cpath d='M6 0C2.6914 0 0 2.6914 0 6C0 9.3086 2.6914 12 6 12C9.3086 12 12 9.30813 12 6C12 2.69187 9.3086 0 6 0ZM6 11.0705C3.20449 11.0705 0.929508 8.79598 0.929508 6C0.929508 3.20402 3.20449 0.929508 6 0.929508C8.79598 0.929508 11.0705 3.20402 11.0705 6C11.0705 8.79598 8.79551 11.0705 6 11.0705Z' fill='%236B9B35'/%3E%3Cpath d='M8.75277 3.91322C8.5636 3.74126 8.26941 3.75473 8.09654 3.94481L5.26152 7.06659L3.89187 5.67419C3.71108 5.49108 3.41736 5.48829 3.23471 5.66862C3.05159 5.84848 3.0488 6.14266 3.22913 6.32578L4.94361 8.06862C5.03145 8.15784 5.15042 8.20758 5.27497 8.20758C5.27776 8.20758 5.28102 8.20758 5.2838 8.20805C5.41208 8.20526 5.53292 8.15041 5.61889 8.05561L8.78434 4.56994C8.95679 4.37937 8.94284 4.08565 8.75277 3.91322Z' fill='%236B9B35'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_18_116'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: top 3px left
+
+        @media ($min-md)
+            padding-left: 26px
+            background-position: top 4px left
+            background-size: 17px 17px
+
+        &:not(:last-child)
+            margin-bottom: .8rem
+
+    a
+        color: var(--black)
+        border-bottom: 1px solid var(--black)
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--red)
+            border-color: transparent

@@ -1,0 +1,40 @@
+.burger
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    width: 26px
+    height: 35px
+    line-height: 1
+    gap: 8px
+    color: var(--black)
+    transition: color .5s ease
+
+    &:hover,
+    &:active,
+    &:focus-visible
+
+        .burger__line
+            background: var(--black)
+
+    &.is-active
+
+        .burger__line
+
+            &:nth-child(1)
+                transform: rotate(45deg) translate(7px, 7px)
+
+            &:nth-child(2)
+                opacity: 0
+
+            &:nth-child(3)
+                transform: rotate(-45deg) translate(7px, -7px)
+    
+    &__line
+        width: 26px
+        height: 2px
+        background: var(--black)
+        transition: all .5s ease
+
+        &:nth-child(2)
+            width: 18px

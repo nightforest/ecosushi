@@ -1,0 +1,24 @@
+.up-button
+    position: absolute
+    top: -21px
+    right: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 42px
+    height: 42px
+    border-radius: 4px
+    background: var(--green)
+    color: var(--white)
+    transition: all .5s ease
+    cursor: pointer
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        background: var(--green)
+        color: var(--white)
+
+        @media ($min-md)
+            background: var(--yellow)
+            color: var(--white)

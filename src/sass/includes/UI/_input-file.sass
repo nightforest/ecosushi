@@ -1,0 +1,49 @@
+.input-file
+    position: relative
+    display: block
+    text-align: center
+    font-size: 14px
+    width: 100%
+    box-shadow: none
+    line-height: 1.2
+    color: var(--white)
+    outline: none
+    appearance: none
+
+    &__button
+        min-width: 205px
+        height: 35px
+        font-size: 12px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+
+            .input-file__icon
+                color: var(--white)
+            
+            @media ($max-md)
+                background: none
+                border-color: var(--yellow)
+                color: var(--white)
+
+    &__icon
+        color: var(--yellow)
+        min-width: 11px
+        
+    &__text
+        display: block
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        font-weight: 400
+        font-size: 12px
+        line-height: 1.6
+
+    &__field
+        position: absolute
+        z-index: -1
+        opacity: 0
+        display: block
+        width: 0
+        height: 0

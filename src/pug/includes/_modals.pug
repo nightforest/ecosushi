@@ -1,0 +1,324 @@
+.modal-wrap
+    #modal-contacts.modal.modal-contacts
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title.modal__title--mb-30 Обери зручний спосіб зв’язку
+                
+                address.social.modal__social
+                    ul.social__list
+                        li.social__item
+                            a.social__link(href="#" aria-label="Telegram")
+                                svg.social__icon(width="40" height="36")
+                                    use(xlink:href="img/sprite.svg#telegram")
+                            
+                            span.social__title Телеграм
+
+                        li.social__item
+                            a.social__link(href="#" aria-label="Viber")
+                                svg.social__icon(width="44" height="48")
+                                    use(xlink:href="img/sprite.svg#viber")
+                            
+                            span.social__title Вайбер
+                        
+                        li.social__item
+                            a.social__link(href="#" aria-label="Phone")
+                                svg.social__icon(width="44" height="44")
+                                    use(xlink:href="img/sprite.svg#phone")
+
+                            span.social__title По телефону
+
+    #modal-delete.modal.modal-delete
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title Ви згодні, що хочете 
+                    br
+                    | видалити товар?
+
+                .modal__buttons
+                    button.button.modal__button(type="button") Так
+                    button.button.button--outline.modal__button(type="button") Ні
+
+    #modal-map.modal.modal-map
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                .map-legend.modal-map__legend
+                    h2.map-legend__title Зони доставки замовлень 
+                        span ECO SUSHI
+                        |  за кольорами (мінімальна сума):
+
+                    ul.map-legend__list
+                        li.map-legend__item
+                            .map-legend__circle.map-legend__circle--red
+                            .map-legend__price від 299 грн
+                        
+                        li.map-legend__item
+                            .map-legend__circle.map-legend__circle--gold
+                            .map-legend__price від 400 грн
+                        
+                        li.map-legend__item
+                            .map-legend__circle.map-legend__circle--yellow
+                            .map-legend__price від 600 грн
+                        
+                        li.map-legend__item
+                            .map-legend__circle.map-legend__circle--blue
+                            .map-legend__price від 1500 грн
+            
+                .map.modal-map__map
+                    <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2162.798245074938!2d35.00944790674444!3d48.43003010485768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe35bedb6ef37%3A0xc126f368feaa7bf4!2sTytova%20St%2C%2013%2C%20Dnipro%2C%20Dnipropetrovs&#39;ka%20oblast%2C%2049000!5e0!3m2!1sen!2sua!4v1693434896784!5m2!1sen!2sua" width="100%" height="175" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    #modal-details.modal.modal-details
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title Сушист
+                .modal__text
+                    p Насолоджуйтесь їжею будь-де і коли завгодно. Завдяки найкращим кур'єрам, ви отримаєте
+                    p Сервіс доставки ECO SUSHI – це не просто бізнес!
+                    p Наш колектив — це сім'я, яка працює в гармонії та злагоді.
+                    p Наша головна цінність – клієнт. Тому ми надаємо бездоганний сервіс та гарантуємо найвищу якість.
+                    p Жодного вчорашнього рису чи залишків риби. Приготування страв здійснюється безпосередньо в момент замовлення. Ви не отримаєте охолоджених заготовок, які кухар зробив з ранку і подав вам увечері.
+ 
+                .modal__buttons
+                    button.button.modal__button(type="button") Відгукнутись
+
+    #modal-feedback.modal.modal-feedback
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title Сушист
+
+                form.form(id="feedback-form" autocomplete="off" novalidate="novalidate")
+                    .form__group
+                        input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="Ім'я *" autocomplete="off" required)
+
+                    .form__group
+                        input#inputPhone.input.form__input.tell-input(type="text" name="inputPhone" placeholder="" autocomplete="off" required)
+
+                    .form__group
+                        input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="E-mail *" autocomplete="off" required)
+                    
+                    .form__agree Згоден з 
+                        a(href="#") договіром публічної оферти
+
+                    .form__group
+                        label.input-file
+                            .button.button--outline.input-file__button(type="button")
+                                svg.input-file__icon(width="11" height="11")
+                                    use(xlink:href="img/sprite.svg#attach")
+                                | Завантажити резюме
+
+                            span.input-file__text
+                            input#inputFile.input-file__field(type="file" name="file")
+                            
+                    .form__button-group.form__button-group--mt-20
+                        button.button.form__button Відгукнутись
+
+    #modal-add.modal.modal-add
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="23" height="23")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                h3.modal__title.modal__title--mb-5 Додати до вашого замовлення
+                p.modal__descr Обрати 1 опцію
+
+                ul.modal__list
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.add-card__button(type="button") Додати
+                                        svg.button__icon(width="14" height="20")
+                                            use(xlink:href="img/sprite.svg#cart")
+
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button.is-visible(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.button--green.add-card__button(type="button") У кошику
+                                        svg.button__icon(width="17" height="16")
+                                            use(xlink:href="img/sprite.svg#check")
+                                            
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.add-card__button(type="button") Додати
+                                        svg.button__icon(width="14" height="20")
+                                            use(xlink:href="img/sprite.svg#cart")
+
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button.is-visible(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.button--green.add-card__button(type="button") У кошику
+                                        svg.button__icon(width="17" height="16")
+                                            use(xlink:href="img/sprite.svg#check")
+
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.add-card__button(type="button") Додати
+                                        svg.button__icon(width="14" height="20")
+                                            use(xlink:href="img/sprite.svg#cart")
+
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button.is-visible(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.button--green.add-card__button(type="button") У кошику
+                                        svg.button__icon(width="17" height="16")
+                                            use(xlink:href="img/sprite.svg#check")
+                                            
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.add-card__button(type="button") Додати
+                                        svg.button__icon(width="14" height="20")
+                                            use(xlink:href="img/sprite.svg#cart")
+
+                    li.modal__list-item
+                        .add-card
+                            .add-card__left
+                                picture.add-card__picture
+                                    img.add-card__img(src="img/add-img-desktop.webp" srcset="img/add-img-desktop@2x.webp 2x" loading="lazy" width="26" height="78"  alt="alt")
+                            
+                            .add-card__right
+                                .add-card__row
+                                    h3.add-card__title
+                                        a.add-card__link(href="#") Coca Cola
+
+                                    button.remove-button.add-card__remove-button.is-visible(type="button")
+                                        svg.remove-button__icon(width="23" height="23")
+                                            use(xlink:href="img/sprite.svg#close-modal")
+
+                                .add-card__descr 0.5 л
+                                .add-card__row
+                                    .add-card__price 25 ₴
+                                    button.button.button--green.add-card__button(type="button") У кошику
+                                        svg.button__icon(width="17" height="16")
+                                            use(xlink:href="img/sprite.svg#check")
+
+                .modal__buttons
+                    button.button.button--green.modal__button(type="button") У кошик
+                        svg.button__icon(width="8" height="8")
+                            use(xlink:href="img/sprite.svg#arrow-right")

@@ -1,0 +1,51 @@
+.jobs-card
+    display: flex
+    flex-direction: column
+    padding: 10px 15px 15px
+    border: 1px solid #494949
+    background: #221E23
+    border-radius: 4px
+    height: 100%
+    width: 100%
+
+    @media ($min-md)
+        padding: 25px 30px 30px
+
+    &__title
+        margin: 0 0 2px
+        font-size: 12px
+        font-weight: 700
+        color: var(--green)
+
+        @media ($min-md)
+            font-size: 22px
+            margin: 0 0 10px
+
+    &__text
+        margin-bottom: 10px
+
+        @media ($min-md)
+            margin-bottom: 20px
+
+        p
+            margin: 0
+
+            @media ($min-md)
+                margin-bottom: 5px
+
+            &:last-child
+
+                @media ($min-md)
+                    margin-bottom: 0
+    
+    &__buttons
+        display: flex
+        gap: 12px
+        margin-top: auto
+
+    &__button
+
+        @media ($min-md)
+            padding: 5px 10px
+            height: 35px
+            font-size: 12px

@@ -1,0 +1,67 @@
+.add-card
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    gap: 10px
+
+    &__left
+        grid-column: 4 span
+
+    &__right
+        grid-column: 8 span
+
+    &__picture
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 5px
+
+    &__img
+        max-width: 100%
+        max-height: 60px
+        width: auto
+        height: auto
+
+        @media ($min-md)
+            max-height: 100%
+
+    &__title
+        margin: 0 0 2px
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 500
+
+        @media ($min-md)
+            font-size: 20px
+    
+    &__descr
+        margin: 0 0 5px
+        font-size: 12px
+        font-weight: 400
+        color: #9C9C9C
+
+    &__link
+        color: var(--white)
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+    
+    &__price
+        font-size: 18px
+        font-weight: 500
+
+    &__remove-button
+        opacity: 0
+        visibility: hidden
+
+        &.is-visible
+            opacity: 1
+            visibility: visible

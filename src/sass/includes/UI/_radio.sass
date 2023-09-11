@@ -1,0 +1,118 @@
+.radio
+    padding: 0
+    margin: 0
+    line-height: 1
+
+    &__label
+        position: relative
+        display: flex
+        flex-direction: column
+        text-align: left
+        font-size: 12px
+        line-height: 20px
+        font-weight: 400
+        color: var(--white)
+        margin: 0
+        padding: 0 0 0 32px
+        cursor: pointer
+        user-select: none
+        transition: all .5s ease
+
+        @media ($min-md)
+            font-size: 14px
+
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px
+            height: 20px
+            border: 1px solid #494949
+            background: #221E23
+            border-radius: 50%
+            transition: all .2s ease
+            content: ""
+        
+        &::after
+            position: absolute
+            top: 4px
+            left: 4px
+            width: 12px
+            height: 12px
+            background: var(--green)
+            border-radius: 50%
+            transition: all .2s ease
+            content: ""
+
+        &:hover,
+        &:active
+
+            @media ($min-md)
+                color: var(--yellow)
+
+        span
+            display: block
+            color: #9C9C9C
+            font-size: 12px
+        
+        a
+            color: #9C9C9C
+            text-decoration: underline
+            transition: color .5s ease
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: #9C9C9C
+
+                @media ($min-md)
+                    color: var(--yellow)
+
+    &__input
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+        // Checked
+        &:checked + .radio__label::before
+            border-color: #494949
+
+        &:checked + .radio__label::after
+            opacity: 1
+            transform: scale(1)
+
+        // Not Checked
+        &:not(:checked) + .radio__label::after
+            opacity: 0
+            transform: scale(0)
+
+        // Hover
+        &:not(:disabled):not(:checked) + .radio__label:hover::before
+            // border-color: var(--orange)
+
+        // Active 
+        &:not(:disabled):active + .radio__label::before
+            background: var(--light-green)
+
+        // Focus 
+        &:focus-visible + .radio__label::before
+            border-color: var(--green)
+
+        &:focus-visible:not(:checked) + .radio__label::before
+            border-color: var(--green)
+        
+        // Disabled
+        &:disabled
+            &:not(:checked) + .radio__label::before
+                box-shadow: none
+                border-color: #494949
+
+            &:checked + .radio__label
+                &::before
+                    box-shadow: none
+                    border-color: #494949
+                    background: #221E23
+
+            + .radio__label
+                color: #494949
+
