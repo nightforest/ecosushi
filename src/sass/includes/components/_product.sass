@@ -41,6 +41,11 @@
             z-index: $z-index-1
             transform: rotate(-45deg)
 
+            @media ($min-md)
+                left: -14px
+                width: 56px
+                height: 22px
+
             span
                 position: relative
                 width: 100%
@@ -57,6 +62,9 @@
                 line-height: 1
                 z-index: $z-index-1
 
+                @media ($min-md)
+                    font-size: 16px
+
             &:before
                 position: absolute
                 top: 2px
@@ -68,6 +76,9 @@
                 border-color: transparent transparent transparent #4e8118
                 content: ""
                 transform: rotate(13deg)
+
+                @media ($min-md)
+                    border-width: 12px 0 12px 12px
             
             &:after
                 position: absolute
@@ -80,6 +91,9 @@
                 border-color: transparent #4e8118 transparent transparent
                 content: ""
                 transform: rotate(-13deg)
+
+                @media ($min-md)
+                    border-width: 12px 12px 12px 0
 
             &--purple
 

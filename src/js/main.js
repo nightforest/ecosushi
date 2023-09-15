@@ -9,13 +9,13 @@ import promoFormValidation from './includes/promoFormValidation.js';
 import feedbackFormValidation from './includes/feedbackFormValidation.js';
 import inputFile from './includes/inputFile.js';
 import topSlider from './includes/topSlider.js';
-import phoneInput from './includes/phoneInput.js';
 import footerMenu from './includes/footerMenu.js';
 import numbersInput from './includes/numbersInput.js';
 import select from './includes/select.js';
 import closeAlert from './includes/closeAlert.js';
 import photoSwipe from './includes/photoSwipe.js';
 import bottomMenu from './includes/bottomMenu.js';
+import phoneMask from './includes/phoneMask.js';
 import '../sass/main.sass';
 
 
@@ -30,10 +30,10 @@ promoFormValidation();
 feedbackFormValidation();
 inputFile();
 topSlider();
-phoneInput();
 footerMenu();
 numbersInput();
 select();
 closeAlert();
 photoSwipe();
 bottomMenu();
+phoneMask();

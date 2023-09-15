@@ -109,20 +109,21 @@ section.checkout-section
                 
                 .form__group
                     .radio
-                        input.radio__input#delivery-radio-1(type="radio" name="delivery-radio" value="department" checked)
-                        label.radio__label(for="delivery-radio-1") Самовивіз
-                
+                        input.radio__input#delivery-radio-1(type="radio" name="delivery-radio" value="address")
+                        label.radio__label(for="delivery-radio-1") Доставка
+                            //- span Суму мінімального замовлення для доставки у вашому районі дивіться 
+                            //-     a(href="#") тут
+
                 .form__group
                     .radio
-                        input.radio__input#delivery-radio-2(type="radio" name="delivery-radio" value="address")
-                        label.radio__label(for="delivery-radio-2") Доставка
-                            span Суму мінімального замовлення для доставки у вашому районі дивіться 
-                                a(href="#") тут
+                        input.radio__input#delivery-radio-2(type="radio" name="delivery-radio" value="department" checked)
+                        label.radio__label(for="delivery-radio-2") Самовивіз
 
             .form__row
                 .form__group.form__group--12.form__group--md-4
-                    select#selectCity.select(name="selectCity" aria-label="Choose a city" required)
-                        option(value="1") Кам’янське
+                    input#inputCity.input.form__input(type="text" name="inputCity" placeholder="Кам’янське" autocomplete="off" required readonly)
+                    //- select#selectCity.select(name="selectCity" aria-label="Choose a city" required)
+                    //-     option(value="1") Кам’янське
 
                 .form__group.form__group--6.form__group--md-4
                     input#inputStreet.input.form__input(type="text" name="inputStreet" placeholder="Вулиця *" autocomplete="off" required)
@@ -146,7 +147,7 @@ section.checkout-section
                     input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="Ім'я *" autocomplete="off" required)
                 
                 .form__group.form__group--12.form__group--md-6
-                    input#inputPhone.input.form__input.tell-input(type="text" name="inputPhone" placeholder="" autocomplete="off" required)
+                    input#inputPhone.input.form__input.phone-mask(type="text" name="inputPhone" placeholder="Телефон *" autocomplete="off" required)
 
             .form__group
                 textarea#textarea.textarea.form__input(name="message" rows="3" placeholder="Коментар до замовлення" autocomplete="off")

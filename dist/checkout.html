@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-439d2eee.js"></script>
-      <link rel="stylesheet" href="/assets/main-dc848838.css">
+      <script type="module" crossorigin src="/assets/main-af6bcf77.js"></script>
+      <link rel="stylesheet" href="/assets/main-399c70c3.css">
     </head>
     <body>
         <!-- Header -->
@@ -38,7 +38,7 @@
 <header class="header">
   <div class="header__top">
     <div class="container header__container">
-      <div class="logo header__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo.svg" width="138" height="23" alt="logo"/><img class="logo__city" src="img/city.svg" width="64" height="11" alt="city"/></a></div>
+      <div class="logo header__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo.svg" width="214" height="35" alt="logo"/><img class="logo__city" src="img/city.svg" width="64" height="11" alt="city"/></a></div>
       <nav class="header-menu">
         <ul class="header-menu__list">
           <li class="header-menu__item"><a class="header-menu__link is-active" href="#">Акції</a></li>
@@ -225,22 +225,20 @@
         <label class="form__title">Спосіб доставки</label>
         <div class="form__group">
           <div class="radio">
-            <input class="radio__input" id="delivery-radio-1" type="radio" name="delivery-radio" value="department" checked="checked"/>
-            <label class="radio__label" for="delivery-radio-1">Самовивіз</label>
+            <input class="radio__input" id="delivery-radio-1" type="radio" name="delivery-radio" value="address"/>
+            <label class="radio__label" for="delivery-radio-1">Доставка</label>
           </div>
         </div>
         <div class="form__group">
           <div class="radio">
-            <input class="radio__input" id="delivery-radio-2" type="radio" name="delivery-radio" value="address"/>
-            <label class="radio__label" for="delivery-radio-2">Доставка<span>Суму мінімального замовлення для доставки у вашому районі дивіться <a href="#">тут</a></span></label>
+            <input class="radio__input" id="delivery-radio-2" type="radio" name="delivery-radio" value="department" checked="checked"/>
+            <label class="radio__label" for="delivery-radio-2">Самовивіз</label>
           </div>
         </div>
       </div>
       <div class="form__row">
         <div class="form__group form__group--12 form__group--md-4">
-          <select class="select" id="selectCity" name="selectCity" aria-label="Choose a city" required="required">
-            <option value="1">Кам’янське</option>
-          </select>
+          <input class="input form__input" id="inputCity" type="text" name="inputCity" placeholder="Кам’янське" autocomplete="off" required="required" readonly="readonly"/>
         </div>
         <div class="form__group form__group--6 form__group--md-4">
           <input class="input form__input" id="inputStreet" type="text" name="inputStreet" placeholder="Вулиця *" autocomplete="off" required="required"/>
@@ -264,7 +262,7 @@
           <input class="input form__input" id="inputName" type="text" name="inputFirstName" placeholder="Ім'я *" autocomplete="off" required="required"/>
         </div>
         <div class="form__group form__group--12 form__group--md-6">
-          <input class="input form__input tell-input" id="inputPhone" type="text" name="inputPhone" placeholder="" autocomplete="off" required="required"/>
+          <input class="input form__input phone-mask" id="inputPhone" type="text" name="inputPhone" placeholder="Телефон *" autocomplete="off" required="required"/>
         </div>
       </div>
       <div class="form__group">
@@ -304,7 +302,7 @@
                 <use xlink:href="img/sprite.svg#clock"></use>
               </svg>
               <div class="contacts__text">
-                <p>9:30 - 21:30</p>
+                <p>10:00 - 22:00</p>
               </div>
             </li>
             <li class="contacts__item">
@@ -313,7 +311,16 @@
               </svg>
               <div class="contacts__text">
                 <p>м. Дніпро, вул. Титова, 13</p>
+                <p><a href="tel:+380973509595">+38 (097) 350-95-95</a></p>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <svg class="contacts__icon" width="15" height="15">
+                <use xlink:href="img/sprite.svg#location"></use>
+              </svg>
+              <div class="contacts__text">
                 <p>м. Дніпро, вул. Михайла Грушевського, 2</p>
+                <p><a href="tel:+380973509595">+38 (097) 350-95-95</a></p>
               </div>
             </li>
           </ul>
@@ -336,9 +343,9 @@
         </div>
       </div>
       <div class="footer__col">
-        <div class="logo footer__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo.svg" width="138" height="23" alt="logo"/></a></div>
+        <div class="logo footer__logo"><a class="logo__link" href="#" aria-label="logo"><img class="logo__img" src="img/logo.svg" width="214" height="35" alt="logo"/></a></div>
         <div class="footer__offer"><a class="footer__offer-link" href="#">Договір публічної оферти</a></div>
-        <div class="footer__copyright footer__copyright--mb">&copy; Eco Sushi 2020-2023 Всі права захищені </div>
+        <div class="footer__copyright footer__copyright--mb">&copy; Eco Sushi 2020-2024 Всі права захищені </div>
         <address class="social footer__social">
           <ul class="social__list">
             <li class="social__item"><a class="social__link" href="#" aria-label="Instagram">
@@ -378,7 +385,7 @@
           <use xlink:href="img/sprite.svg#visa"></use>
         </svg>
       </div>
-      <div class="footer__copyright"> 2023 &copy; Eco Sushi</div>
+      <div class="footer__copyright"> 2024 &copy; Eco Sushi</div>
       <div class="footer__dev">Розробка сайту <a class="footer__dev-link" href="#"><img class="footer__dev-img" src="img/shafem.svg" width="90" height="20" alt="shafem logo"/></a></div>
     </div>
   </div><a class="up-button" href="#main" data-scroll="data-scroll">
@@ -580,10 +587,7 @@
             <input class="input form__input" id="inputName" type="text" name="inputFirstName" placeholder="Ім'я *" autocomplete="off" required="required"/>
           </div>
           <div class="form__group">
-            <input class="input form__input tell-input" id="inputPhone" type="text" name="inputPhone" placeholder="" autocomplete="off" required="required"/>
-          </div>
-          <div class="form__group">
-            <input class="input form__input" id="inputEmail" type="email" name="inputEmail" placeholder="E-mail *" autocomplete="off" required="required"/>
+            <input class="input form__input phone-mask" id="inputPhone" type="text" name="inputPhone" placeholder="Телефон *" autocomplete="off" required="required"/>
           </div>
           <div class="form__agree">Згоден з <a href="#">договіром публічної оферти</a></div>
           <div class="form__group">
