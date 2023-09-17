@@ -14,7 +14,6 @@ import numbersInput from './includes/numbersInput.js';
 import select from './includes/select.js';
 import closeAlert from './includes/closeAlert.js';
 import photoSwipe from './includes/photoSwipe.js';
-import bottomMenu from './includes/bottomMenu.js';
 import phoneMask from './includes/phoneMask.js';
 import '../sass/main.sass';
 
@@ -35,5 +34,4 @@ numbersInput();
 select();
 closeAlert();
 photoSwipe();
-bottomMenu();
 phoneMask();
