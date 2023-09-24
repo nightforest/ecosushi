@@ -109,17 +109,17 @@ section.checkout-section
                 
                 .form__group
                     .radio
-                        input.radio__input#delivery-radio-1(type="radio" name="delivery-radio" value="address")
+                        input.radio__input#delivery-radio-1(type="radio" name="delivery-radio" value="address" checked)
                         label.radio__label(for="delivery-radio-1") Доставка
                             //- span Суму мінімального замовлення для доставки у вашому районі дивіться 
                             //-     a(href="#") тут
 
                 .form__group
                     .radio
-                        input.radio__input#delivery-radio-2(type="radio" name="delivery-radio" value="department" checked)
+                        input.radio__input#delivery-radio-2(type="radio" name="delivery-radio" value="department")
                         label.radio__label(for="delivery-radio-2") Самовивіз
 
-            .form__row
+            .form__row.form__delivery-group.is-visible(data-delivery="address")
                 .form__group.form__group--12.form__group--md-4
                     input#inputCity.input.form__input(type="text" name="inputCity" placeholder="Кам’янське" autocomplete="off" required readonly)
                     //- select#selectCity.select(name="selectCity" aria-label="Choose a city" required)
@@ -139,6 +139,16 @@ section.checkout-section
 
                 .form__group.form__group--12.form__group--md-4
                     input#inputApartment.input.form__input(type="text" name="inputApartment" placeholder="Квартира" autocomplete="off")
+
+            .form__row.form__delivery-group(data-delivery="department")
+                .form__group.form__group--12.form__group--md-4
+                    input#inputCity.input.form__input(type="text" name="inputCity2" placeholder="Кам’янське" autocomplete="off" required readonly)
+
+                .form__group.form__group--6.form__group--md-4
+                    select#selectLocation.select(name="selectLocation" aria-label="Choose a city" required)
+                        option(value="1") вул.Шевченка 12
+                        option(value="1") вул.Шевченка 13
+                        option(value="1") вул.Шевченка 14
 
             label.form__title Контактні дані
 
