@@ -29,8 +29,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-1cda3a92.js"></script>
-      <link rel="stylesheet" href="/assets/main-399c70c3.css">
+      <script type="module" crossorigin src="/assets/main-3ff5d284.js"></script>
+      <link rel="stylesheet" href="/assets/main-6273c082.css">
     </head>
     <body>
         <!-- Header -->
@@ -225,18 +225,18 @@
         <label class="form__title">Спосіб доставки</label>
         <div class="form__group">
           <div class="radio">
-            <input class="radio__input" id="delivery-radio-1" type="radio" name="delivery-radio" value="address"/>
+            <input class="radio__input" id="delivery-radio-1" type="radio" name="delivery-radio" value="address" checked="checked"/>
             <label class="radio__label" for="delivery-radio-1">Доставка</label>
           </div>
         </div>
         <div class="form__group">
           <div class="radio">
-            <input class="radio__input" id="delivery-radio-2" type="radio" name="delivery-radio" value="department" checked="checked"/>
+            <input class="radio__input" id="delivery-radio-2" type="radio" name="delivery-radio" value="department"/>
             <label class="radio__label" for="delivery-radio-2">Самовивіз</label>
           </div>
         </div>
       </div>
-      <div class="form__row">
+      <div class="form__row form__delivery-group is-visible" data-delivery="address">
         <div class="form__group form__group--12 form__group--md-4">
           <input class="input form__input" id="inputCity" type="text" name="inputCity" placeholder="Кам’янське" autocomplete="off" required="required" readonly="readonly"/>
         </div>
@@ -254,6 +254,18 @@
         </div>
         <div class="form__group form__group--12 form__group--md-4">
           <input class="input form__input" id="inputApartment" type="text" name="inputApartment" placeholder="Квартира" autocomplete="off"/>
+        </div>
+      </div>
+      <div class="form__row form__delivery-group" data-delivery="department">
+        <div class="form__group form__group--12 form__group--md-4">
+          <input class="input form__input" id="inputCity" type="text" name="inputCity2" placeholder="Кам’янське" autocomplete="off" required="required" readonly="readonly"/>
+        </div>
+        <div class="form__group form__group--6 form__group--md-4">
+          <select class="select" id="selectLocation" name="selectLocation" aria-label="Choose a city" required="required">
+            <option value="1">вул.Шевченка 12</option>
+            <option value="1">вул.Шевченка 13</option>
+            <option value="1">вул.Шевченка 14</option>
+          </select>
         </div>
       </div>
       <label class="form__title">Контактні дані</label>
