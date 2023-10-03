@@ -32,7 +32,7 @@ const modal = () => {
 
     modalAll.forEach(item => {
         item.addEventListener('click', e => {
-            if (!e.target.closest('.modal__window')) {
+            if (!e.target.closest('.modal__window') && !e.target.closest('.modal.is-not-clickable')) {
                 closeModal(item);
             }
         });
@@ -50,11 +50,6 @@ const modal = () => {
         header.style.paddingRight = paddingRight + 'px';
         modalWrap.classList.add('is-visible');
         modal.classList.add('is-visible');
-
-        const video = modal.querySelector('#youtube-video');
-        if (video) {
-            video.src += '&autoplay=1';
-        }
     }
     const closeModal = (modal) => {
         modalWrap.classList.remove('is-visible');
@@ -66,11 +61,6 @@ const modal = () => {
                 body.style.paddingRight = '0px';
                 header.style.paddingRight = '0px';
             }, 500);
-        }
-
-        const video = modal.querySelector('#youtube-video');
-        if (video) {
-            video.src = video.src.replace('&autoplay=1', '');
         }
     }
 }

@@ -128,13 +128,9 @@
                     .form__button-group.form__button-group--mt-20
                         button.button.form__button Відгукнутись
 
-    #modal-add.modal.modal-add
+    #modal-add.modal.modal-add.is-not-clickable
         .modal__inner
             .modal__window
-                button.modal__close(aria-label="Close modal" data-modal-close type="button")
-                    svg.modal__close-icon(width="23" height="23")
-                        use(xlink:href="img/sprite.svg#close-modal")
-                
                 h3.modal__title.modal__title--mb-5 Додати до вашого замовлення
                 p.modal__descr Обрати 1 опцію
 
