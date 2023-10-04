@@ -15,6 +15,12 @@
         position: relative
         width: 100%
 
+        &.is-active
+
+            .menu__link
+                color: var(--white)
+                background: var(--green)
+
     &__link
         position: relative
         display: flex
@@ -39,8 +45,3 @@
         &:focus-visible
             color: var(--white)
             background: var(--yellow)
-
-        &.is-active
-            color: var(--white)
-            font-weight: 700
-            background: var(--green)
