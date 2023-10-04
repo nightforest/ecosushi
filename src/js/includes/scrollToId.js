@@ -16,6 +16,11 @@ const scrollToId = () => {
         offset: headerHeight,
         navClass: 'is-active',
     });
+
+    new Gumshoe('.bottom-menu a', {
+        offset: headerHeight,
+        navClass: 'is-active',
+    });
 }
 
 export default scrollToId;
