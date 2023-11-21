@@ -16,6 +16,7 @@ import closeAlert from './includes/closeAlert.js';
 import photoSwipe from './includes/photoSwipe.js';
 import phoneMask from './includes/phoneMask.js';
 import deliveryRadio from './includes/deliveryRadio.js';
+import latestSlider from './includes/latestSlider.js';
 import '../sass/main.sass';
 
 
@@ -37,3 +38,4 @@ closeAlert();
 photoSwipe();
 phoneMask();
 deliveryRadio();
+latestSlider();

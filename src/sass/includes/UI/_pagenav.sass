@@ -15,78 +15,69 @@
         align-items: center
         justify-content: center
         width: auto
-        height: 70px
+        height: 42px
         line-height: 1
         color: var(--grey)
-        font-size: 22px
-        font-weight: 900
+        font-size: 16px
+        font-weight: 400
         text-align: center
 
-        @media ($max-md)
-            height: 40px
+        @media ($min-md)
+            height: 55px
+            font-size: 18px
 
         &.is-active
 
             .pagenav__link
-                background: var(--blue)
-                border-color: var(--blue)
-                color: #fff
+                background: var(--green)
+                border-color: var(--green)
+                color: var(--white)
 
     &__link
         position: relative
         display: flex
         align-items: center
         justify-content: center
-        width: 70px
-        height: 70px
-        border: 1px solid #E6E6E6
+        width: 42px
+        height: 42px
+        border: 1px solid var(--yellow)
+        border-radius: 4px
         text-decoration: none
-        font-size: 22px
-        font-weight: 900
-        color: var(--black)
+        font-size: 16px
+        font-weight: 400
+        color: var(--white)
         line-height: 1
         transition: all .5s ease
 
-        @media ($max-md)
-            width: 40px
-            height: 40px
-            font-size: 16px
+        @media ($min-md)
+            height: 55px
+            width: 55px
+            font-size: 18px
         
-        &:hover
-            border-color: var(--blue)
-            color: var(--blue)
-
-        &:active
-            border-color: var(--blue)
-            color: var(--blue)
-
+        &:hover,
+        &:active,
         &:focus-visible
-            border-color: var(--blue)
-            color: var(--blue)
+            background: var(--yellow)
+            color: var(--white)
 
     &__arrow
         position: relative
         display: flex
         align-items: center
         justify-content: center
-        width: 70px
-        height: 70px
-        border: 1px solid #E6E6E6
+        width: 42px
+        height: 42px
+        border: 1px solid var(--yellow)
+        border-radius: 4px
         transition: all .5s ease
-        color: var(--blue)
+        color: var(--white)
 
-        @media ($max-md)
-            width: 40px
-            height: 40px
+        @media ($min-md)
+            height: 55px
+            width: 55px
 
-        &:hover
-            border-color: var(--blue)
-            color: var(--blue)
-
-        &:active
-            border-color: var(--blue)
-            color: var(--blue)
-
+        &:hover,
+        &:active,
         &:focus-visible
-            border-color: var(--blue)
-            color: var(--blue)
+            background: var(--yellow)
+            color: var(--white)

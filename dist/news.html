@@ -7,10 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Title -->
-        <title>Thanks Page</title>
+        <title>News Page</title>
         <!-- SEO Meta -->
-        <meta name="description" content="GreenBazar description">
-        <meta name="keywords" content="greenbazar">
+        <meta name="description" content="Page description">
+        <meta name="keywords" content="keyword">
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -118,27 +118,175 @@
 </header>
 
         <!-- Main -->
-        <main id="main" class="main main--flex">
+        <main id="main" class="main">
             
-<section class="thanks-section">
-  <picture class="thanks-section__bg">
-    <source srcset="img/thanks-bg-desktop@2x.webp 2x, img/thanks-bg-desktop.webp" width="1920" height="680" media="(min-width: 768px)"/><img class="thanks-section__bg-img" src="img/thanks-bg.webp" srcset="img/thanks-bg@2x.webp 2x" loading="lazy" width="414" height="311" alt="alt"/>
+<section class="header-section">
+  <picture class="header-section__bg">
+    <source srcset="img/header-bg-desktop@2x.webp 2x, img/header-bg-desktop.webp" width="1920" height="134" media="(min-width: 768px)"/><img class="header-section__bg-img" src="img/header-bg.webp" srcset="img/header-bg@2x.webp 2x" loading="lazy" width="414" height="134" alt="alt"/>
   </picture>
-  <div class="container thanks-section__container">
-    <h1 class="page-title thanks-section__title">Дякую за замовлення №123</h1>
-    <p class="thanks-section__descr">Поки чекаєте на замовлення, підпишись на роли в інсту та фейсбук.</p>
-    <address class="social thanks-section__social">
-      <ul class="social__list">
-        <li class="social__item"><a class="social__link social__link--gradient" href="#" aria-label="Instagram">
-            <svg class="social__icon" width="20" height="20">
-              <use xlink:href="img/sprite.svg#instagram-2"></use>
+  <div class="container header-section__container">
+    <nav class="breadcrumbs header-section__breadcrumbs" aria-label="breadcrumb">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Головна</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Новини</li>
+      </ul>
+    </nav>
+    <h1 class="page-title header-section__title">Новини</h1>
+  </div>
+</section>
+            
+<section class="news-section">
+  <div class="container news-section__container">
+    <h2 class="section-title news-section__title">Хештеги:</h2>
+    <ul class="tags-list">
+      <li class="tags-list__item"><a class="button tags-list__button" href="#">#Tag_1</a></li>
+      <li class="tags-list__item"><a class="button tags-list__button" href="#">#Tag_2</a></li>
+      <li class="tags-list__item"><a class="button tags-list__button" href="#">#Tag_3</a></li>
+    </ul>
+    <ul class="news-section__list">
+      <li class="news-section__item">
+        <div class="blog-card">
+          <ul class="blog-card__tags">
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">General</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Health</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Life As A Pet Parent</a></li>
+          </ul><a class="blog-card__link" href="#">
+            <picture class="blog-card__picture"><img class="blog-card__img" src="img/blog-img-1.webp" srcset="img/blog-img-1@2x.webp 2x" loading="lazy" width="350" height="251" alt="alt"/></picture>
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How pet parents can get involved in World Cleanup Day</h3>
+              <div class="blog-card__descr">
+                <p>Roll up your sleeves on the 16th September, it’s World Cleanup Day 2023! On the 7th anniversary of World Cleanup Day, the organisers are hoping...</p>
+              </div>
+              <div class="blog-card__more">Читати далі
+                <svg class="blog-card__more-icon" width="6" height="12">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div></a>
+        </div>
+      </li>
+      <li class="news-section__item">
+        <div class="blog-card">
+          <ul class="blog-card__tags">
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">General</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Health</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Life As A Pet Parent</a></li>
+          </ul><a class="blog-card__link" href="#">
+            <picture class="blog-card__picture"><img class="blog-card__img" src="img/blog-img-2.webp" srcset="img/blog-img-2@2x.webp 2x" loading="lazy" width="350" height="251" alt="alt"/></picture>
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How pet parents can get involved in World Cleanup Day</h3>
+              <div class="blog-card__descr">
+                <p>Roll up your sleeves on the 16th September, it’s World Cleanup Day 2023! On the 7th anniversary of World Cleanup Day, the organisers are hoping...</p>
+              </div>
+              <div class="blog-card__more">Читати далі
+                <svg class="blog-card__more-icon" width="6" height="12">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div></a>
+        </div>
+      </li>
+      <li class="news-section__item">
+        <div class="blog-card">
+          <ul class="blog-card__tags">
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">General</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Health</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Life As A Pet Parent</a></li>
+          </ul><a class="blog-card__link" href="#">
+            <picture class="blog-card__picture"><img class="blog-card__img" src="img/blog-img-3.webp" srcset="img/blog-img-3@2x.webp 2x" loading="lazy" width="350" height="251" alt="alt"/></picture>
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How pet parents can get involved in World Cleanup Day</h3>
+              <div class="blog-card__descr">
+                <p>Roll up your sleeves on the 16th September, it’s World Cleanup Day 2023! On the 7th anniversary of World Cleanup Day, the organisers are hoping...</p>
+              </div>
+              <div class="blog-card__more">Читати далі
+                <svg class="blog-card__more-icon" width="6" height="12">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div></a>
+        </div>
+      </li>
+      <li class="news-section__item">
+        <div class="blog-card">
+          <ul class="blog-card__tags">
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">General</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Health</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Life As A Pet Parent</a></li>
+          </ul><a class="blog-card__link" href="#">
+            <picture class="blog-card__picture"><img class="blog-card__img" src="img/blog-img-1.webp" srcset="img/blog-img-1@2x.webp 2x" loading="lazy" width="350" height="251" alt="alt"/></picture>
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How pet parents can get involved in World Cleanup Day</h3>
+              <div class="blog-card__descr">
+                <p>Roll up your sleeves on the 16th September, it’s World Cleanup Day 2023! On the 7th anniversary of World Cleanup Day, the organisers are hoping...</p>
+              </div>
+              <div class="blog-card__more">Читати далі
+                <svg class="blog-card__more-icon" width="6" height="12">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div></a>
+        </div>
+      </li>
+      <li class="news-section__item">
+        <div class="blog-card">
+          <ul class="blog-card__tags">
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">General</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Health</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Life As A Pet Parent</a></li>
+          </ul><a class="blog-card__link" href="#">
+            <picture class="blog-card__picture"><img class="blog-card__img" src="img/blog-img-2.webp" srcset="img/blog-img-2@2x.webp 2x" loading="lazy" width="350" height="251" alt="alt"/></picture>
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How pet parents can get involved in World Cleanup Day</h3>
+              <div class="blog-card__descr">
+                <p>Roll up your sleeves on the 16th September, it’s World Cleanup Day 2023! On the 7th anniversary of World Cleanup Day, the organisers are hoping...</p>
+              </div>
+              <div class="blog-card__more">Читати далі
+                <svg class="blog-card__more-icon" width="6" height="12">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div></a>
+        </div>
+      </li>
+      <li class="news-section__item">
+        <div class="blog-card">
+          <ul class="blog-card__tags">
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">General</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Health</a></li>
+            <li class="blog-card__tags-item"><a class="blog-card__tags-link" href="#">Life As A Pet Parent</a></li>
+          </ul><a class="blog-card__link" href="#">
+            <picture class="blog-card__picture"><img class="blog-card__img" src="img/blog-img-3.webp" srcset="img/blog-img-3@2x.webp 2x" loading="lazy" width="350" height="251" alt="alt"/></picture>
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How pet parents can get involved in World Cleanup Day</h3>
+              <div class="blog-card__descr">
+                <p>Roll up your sleeves on the 16th September, it’s World Cleanup Day 2023! On the 7th anniversary of World Cleanup Day, the organisers are hoping...</p>
+              </div>
+              <div class="blog-card__more">Читати далі
+                <svg class="blog-card__more-icon" width="6" height="12">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </div>
+            </div></a>
+        </div>
+      </li>
+    </ul>
+    <nav class="pagenav news-section__pagenav" aria-label="Page navigation">
+      <ul class="pagenav__list">
+        <li class="pagenav__item"><a class="pagenav__arrow" href="#" aria-label="Previous">
+            <svg class="pagenav__icon" width="17" height="16">
+              <use xlink:href="img/sprite.svg#arrow-left"></use>
             </svg></a></li>
-        <li class="social__item"><a class="social__link social__link--black" href="#" aria-label="Tiktok">
-            <svg class="social__icon" width="20" height="23">
-              <use xlink:href="img/sprite.svg#tiktok"></use>
+        <li class="pagenav__item is-active" aria-current="page"><a class="pagenav__link" href="#">1</a></li>
+        <li class="pagenav__item"><a class="pagenav__link" href="#">2</a></li>
+        <li class="pagenav__item"><span>...</span></li>
+        <li class="pagenav__item"><a class="pagenav__link" href="#">7</a></li>
+        <li class="pagenav__item"><a class="pagenav__arrow" href="#" aria-label="Next">
+            <svg class="pagenav__icon" width="17" height="16">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
             </svg></a></li>
       </ul>
-    </address>
+    </nav>
   </div>
 </section>
         </main>

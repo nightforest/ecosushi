@@ -1,25 +1,30 @@
 import { defineConfig } from "vite"
 import pugPlugin from "vite-plugin-pug"
-import { resolve } from "path"
+import path, { resolve } from "path"
+import fs from 'fs'
 
 const options = { pretty: true } // FIXME: pug pretty is deprecated!
 const locals = { name: "My Pug" }
 
+let input = {}
+const camelize = (str) => {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+}
+fs.readdirSync(__dirname).map((file) => {
+    const filename = path.join(__dirname, file);
+    const stat = fs.lstatSync(filename);
+    if (stat.isDirectory() || !filename.match(/\.html$/)) {
+        return
+    }
+    const name = camelize(file.replace(/\.html$/, ''))
+    input[name] = filename
+})
+
 export default defineConfig({
     plugins: [pugPlugin(options, locals)],
     build: {
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'about.html'),
-                checkout: resolve(__dirname, 'checkout.html'),
-                contacts: resolve(__dirname, 'contacts.html'),
-                delivery: resolve(__dirname, 'delivery.html'),
-                order: resolve(__dirname, 'order.html'),
-                product: resolve(__dirname, 'product.html'),
-                sales: resolve(__dirname, 'sales.html'),
-                thanks: resolve(__dirname, 'thanks.html'),
-            },
-        },
+        rollupOptions: {input},
     },
 })

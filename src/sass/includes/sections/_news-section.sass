@@ -1,0 +1,33 @@
+.news-section
+    padding: 20px 0 30px
+
+    @media ($min-md)
+        padding: 50px 0
+
+    &__title
+        margin-bottom: 10px
+
+        @media ($min-md)
+            margin-bottom: 20px
+    
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 15px
+        padding: 0
+        margin: 0 0 30px
+        list-style: none
+
+        @media ($min-sm)
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            gap: 30px
+            margin-bottom: 50px
+
+    &__item
+
+        @media ($min-sm)
+            grid-column: 6 span
+
+        @media ($min-lg)
+            grid-column: 4 span

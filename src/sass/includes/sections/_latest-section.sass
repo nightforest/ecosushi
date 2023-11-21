@@ -1,0 +1,45 @@
+.latest-section
+    padding: 25px 0
+
+    @media ($min-md)
+        padding: 70px 0
+
+    &__header
+        margin-bottom: 20px
+        
+        @media ($min-md)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 30px
+            margin-bottom: 30px
+
+    &__title
+
+        @media ($max-md)
+            text-align: center
+
+    &__button
+        
+        @media ($min-md)
+            gap: 20px
+
+        &--visible-md
+            display: flex
+            margin: 0 auto
+            max-width: 114px
+            
+            @media ($min-md)
+                display: none
+            
+        &--hidden-md
+            display: none
+
+            @media ($min-md)
+                display: flex
+        
+        .button__icon
+
+            @media ($min-md)
+                width: 8px
+                height: 13px

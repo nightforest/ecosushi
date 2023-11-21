@@ -1,0 +1,35 @@
+.page-section
+    padding: 20px 0 10px
+    background: linear-gradient(135deg, #2F3328, #1F1B1F, #1F1B1F)
+
+    @media ($min-md)
+        padding: 50px 0 20px
+
+    &__text
+
+        p
+
+            &:last-child
+                margin-bottom: 0
+
+    &__img
+        border-radius: 4px
+        width: 100%
+        height: auto
+        margin-bottom: .8rem
+
+        @media ($min-md)
+            width: auto
+            max-width: 100%
+
+        &--right
+
+            @media ($min-md)
+                float: right
+                margin: 0 0 .5rem 1.5rem
+
+        &--left
+
+            @media ($min-md)
+                float: left
+                margin: 0 1.5rem .5rem 0
