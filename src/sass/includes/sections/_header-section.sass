@@ -2,10 +2,14 @@
     position: relative
     display: flex
     align-items: center
+    text-align: center
     width: 100%
     padding: 15px 0
     min-height: 134px
     z-index: $z-index-0
+
+    @media ($min-md)
+        text-align: left
 
     &__bg
         position: absolute
@@ -28,6 +32,20 @@
         @media ($min-md)
             text-align: left
     
+    &__date
+        display: inline-flex
+        padding: 5px 10px
+        border-radius: 4px
+        line-height: 1
+        background: var(--green)
+        color: var(--white)
+        font-size: 12px
+        text-align: center
+        margin: 0 auto 10px
+
+        @media ($min-md)
+            font-size: 14px
+
     &__title
 
         @media ($min-md)
